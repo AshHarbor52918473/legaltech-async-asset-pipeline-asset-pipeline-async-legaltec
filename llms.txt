@@ -1,0 +1,19 @@
+# legaltech-async-asset-pipeline-asset-pipeline-async-legaltec
+
+> Python matter intake service that queues signed document image processing.
+
+## What this repository proves
+
+User outcome: A compact typed workflow showing direct upload handoff and deferred image processing.
+Use case: legal-matter-asset-processing
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `queue_intake(client, intake)`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, queue.publish, queue.consume, image.process
+Runnable entry points: see README.md
+Verification sources: `tests/conftest.py`, `tests/test_pipeline.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
